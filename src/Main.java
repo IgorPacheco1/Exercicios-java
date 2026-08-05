@@ -10,7 +10,11 @@ public class Main {
         filme1.duracaoEmMinuitos=166;
         filme1.incluidoNoPlano=true;
 
+        filme1.avalia(4.9);
+        filme1.avalia(4.8);
+        filme1.avalia(5);
         filme1.exibeFichaTecnica();
+
 
     }
 }
