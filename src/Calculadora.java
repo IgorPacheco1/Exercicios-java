@@ -1,7 +1,8 @@
 public class Calculadora {
 
     double multiplica(double value){
-        return value*value;
+
+        return value*2;
     }
 
 }
