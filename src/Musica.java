@@ -15,6 +15,7 @@ public class Musica {
         System.out.println("Ano de lançamento: " + anoDeLancamento);
         System.out.println("Avaliação: " + avaliacaoMedia());
         System.out.println("Quantidades de avaliações: " + numAvaliacoes);
+        System.out.println("==========================");
     }
 
     void avalia(double nota){
