@@ -8,4 +8,24 @@ public class Filme {
 
 
 
+    void exibeFichaTecnica(){
+        System.out.println("==================================");
+        System.out.println("FICHA TÉCNICA");
+        System.out.println("Nome: " + nome);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
+        System.out.println("Duração do filme: " + duracaoEmMinuitos + "Minutos");
+        System.out.println("Numero de avaliações: " + somaDasAvaliacoes);
+        System.out.println("Avaliação média: " + pegaMedia());
+        System.out.println("==================================");
+    }
+
+    void avalia(double nota){
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
+    }
+
+    double pegaMedia(){
+        double media = somaDasAvaliacoes / totalDeAvaliacoes;
+        return media;
+    }
 }
