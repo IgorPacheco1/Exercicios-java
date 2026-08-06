@@ -8,17 +8,14 @@ public class Main {
         Calculadora calculadora1 = new Calculadora();
         Musica musica1 = new Musica();
         Aluno aluno1 = new Aluno();
+        IdadePessoa idade = new IdadePessoa();
+
+        idade.setIdade(17);
+        idade.setNome("Igor");
+        idade.verificaIdade();
 
 
-        filme1.setNome("Senhor dos aneis");
-        filme1.setAnoDeLancamento(2001);
-        filme1.setDuracaoEmMinuitos(180);
-        filme1.setIncluidoNoPlano(true);
 
-        filme1.avalia(4.2);
-        filme1.avalia(3.9);
-        filme1.avalia(3.5);
-        filme1.exibeFichaTecnica();
 
 
 
