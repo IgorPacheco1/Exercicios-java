@@ -9,10 +9,15 @@ public class Main {
         Musica musica1 = new Musica();
         Aluno aluno1 = new Aluno();
         IdadePessoa idade = new IdadePessoa();
+        Produto produto1 = new Produto();
 
-        idade.setIdade(17);
-        idade.setNome("Igor");
-        idade.verificaIdade();
+
+        produto1.setNome("banana");
+        produto1.setPreco(10);
+
+        produto1.aplicarDesconto(10);
+        System.out.println(produto1.getPreco());
+
 
 
 
