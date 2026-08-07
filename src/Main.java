@@ -7,16 +7,11 @@ public class Main {
         Pessoa pessoa1 = new Pessoa();
         Calculadora calculadora1 = new Calculadora();
         Musica musica1 = new Musica();
-        Aluno aluno1 = new Aluno();
+        Aluno aluno1 = new Aluno("igor",15,25,10);
         IdadePessoa idade = new IdadePessoa();
         Produto produto1 = new Produto();
 
-
-        produto1.setNome("banana");
-        produto1.setPreco(10);
-
-        produto1.aplicarDesconto(10);
-        System.out.println(produto1.getPreco());
+        aluno1.calculaMedia();
 
 
 
