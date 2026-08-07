@@ -10,8 +10,11 @@ public class Main {
         Aluno aluno1 = new Aluno("igor",15,25,10);
         IdadePessoa idade = new IdadePessoa();
         Produto produto1 = new Produto();
+        Livro livro =  new Livro("CR7","O prime supremo");
 
-        aluno1.calculaMedia();
+        livro.exibirDetalhes();
+
+
 
 
 
