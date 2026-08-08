@@ -3,7 +3,7 @@ package br.com.zazao.exerciciosjava.models;
 public class Titulo {
     private String nome;
     private int anoDeLancamento;
-    private int duracaoEmMinuitos;
+    private int duracaoEmMinutos;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
 
@@ -15,8 +15,8 @@ public class Titulo {
         return anoDeLancamento;
     }
 
-    public int getDuracaoEmMinuitos() {
-        return duracaoEmMinuitos;
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
     }
 
     public boolean isIncluidoNoPlano() {
@@ -35,8 +35,8 @@ public class Titulo {
         this.anoDeLancamento = anoDeLancamento;
     }
 
-    public void setDuracaoEmMinuitos(int duracaoEmMinuitos) {
-        this.duracaoEmMinuitos = duracaoEmMinuitos;
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
     public void setIncluidoNoPlano(boolean incluidoNoPlano) {
@@ -56,7 +56,7 @@ public class Titulo {
         System.out.println("FICHA TÉCNICA");
         System.out.println("Nome: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
-        System.out.println("Duração " + duracaoEmMinuitos + " Minutos");
+        System.out.println("Duração " + duracaoEmMinutos + " Minutos");
         System.out.println("Numero de avaliações: " + totalDeAvaliacoes);
         System.out.println("Avaliação média: " + pegaMedia());
         System.out.println("==================================");
