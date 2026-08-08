@@ -1,6 +1,4 @@
-import br.com.zazao.exerciciosjava.calculos.CalculadoraDeTempo;
-import br.com.zazao.exerciciosjava.models.Serie;
-import br.com.zazao.exerciciosjava.models.Filme;
+import br.com.zazao.exerciciosjava.models.Carro;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -9,33 +7,22 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Filme filme1 = new Filme();
-        filme1.setNome("Minions");
-        filme1.setAnoDeLancamento(2016);
-        filme1.setDuracaoEmMinutos(120);
-        filme1.setIncluidoNoPlano(true);
+        Carro carro1 = new Carro();
+        carro1.setAnoModelo(2012);
+        carro1.setNomeDoModelo("Corolla XLi 1.8 (Flex)");
+        carro1.setPrecoMedioPorAno(58100);
 
-        Filme filme2 = new Filme();
-        filme2.setNome("mafia holandesa");
-        filme2.setAnoDeLancamento(2016);
-        filme2.setDuracaoEmMinutos(120);
-        filme2.setIncluidoNoPlano(true);
+        Carro carro2 = new Carro();
+        carro2.setAnoModelo(2013);
+        carro2.setNomeDoModelo("Corolla XLi 1.8 (Flex)");
+        carro2.setPrecoMedioPorAno(63884);
 
-        Serie serie1 = new Serie();
-        serie1.setNumeroDeEpsodio(180);
-        serie1.setMinutosPorEpisodio(24);
-        serie1.setNome("hunterxhunter");
-        serie1.setIncluidoNoPlano(true);
-        serie1.setNumeroDeTemporadas(3);
+        Carro carro3 = new Carro();
+        carro3.setAnoModelo(2014);
+        carro3.setNomeDoModelo("Corolla XLi 1.8 (Flex)");
+        carro3.setPrecoMedioPorAno(65482);
 
-        CalculadoraDeTempo calcTempo = new CalculadoraDeTempo();
-
-        calcTempo.inclui(filme1);
-        calcTempo.inclui(filme2);
-        calcTempo.inclui(serie1);
-
-        System.out.println("Tempo total para assisitir " + calcTempo.getTempoTotal());
-
+        carro1.exibirDados();
 
     }
 }
