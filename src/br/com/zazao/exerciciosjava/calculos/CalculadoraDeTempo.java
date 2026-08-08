@@ -4,8 +4,10 @@ import br.com.zazao.exerciciosjava.models.Titulo;
 
 public class CalculadoraDeTempo {
     private int tempoTotal;
+
+
     public void inclui(Titulo titulo){
-        this.tempoTotal += titulo.getDuracaoEmMinuitos();
+        this.tempoTotal += titulo.getDuracaoEmMinutos();
     }
 
     public int getTempoTotal() {
