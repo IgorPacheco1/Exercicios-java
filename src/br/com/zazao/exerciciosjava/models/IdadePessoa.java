@@ -1,3 +1,5 @@
+package br.com.zazao.exerciciosjava.models;
+
 public class IdadePessoa {
     private String nome;
     private int idade;

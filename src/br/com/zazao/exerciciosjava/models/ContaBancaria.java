@@ -1,3 +1,5 @@
+package br.com.zazao.exerciciosjava.models;
+
 public class ContaBancaria {
     private int numeroConta;
     private double saldo;

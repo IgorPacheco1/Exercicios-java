@@ -1,3 +1,5 @@
+package br.com.zazao.exerciciosjava.models;
+
 public class Musica {
 
     String titulo;
