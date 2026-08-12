@@ -11,6 +11,10 @@ public class Main {
         sala.calcularPerimetro(7,3);
         TabuadaMultiplicacao tabuada = new TabuadaMultiplicacao();
         tabuada.mostrarTabuada(5);
+        ConversorTemperaturaPadrao temperatura = new ConversorTemperaturaPadrao();
+        temperatura.celsiusParaFahrenheit(30);
+        temperatura.fahrenheitParaCelsius(10);
+
 
     }
 }
