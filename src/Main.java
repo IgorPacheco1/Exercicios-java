@@ -14,7 +14,8 @@ public class Main {
         ConversorTemperaturaPadrao temperatura = new ConversorTemperaturaPadrao();
         temperatura.celsiusParaFahrenheit(30);
         temperatura.fahrenheitParaCelsius(10);
-
+        Livro livro = new Livro("dom pedro", "Brasil",50);
+        livro.calcularPrecoFinal(20);
 
     }
 }
