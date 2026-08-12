@@ -9,6 +9,8 @@ public class Main {
         CalculadoraSalaRetangular sala = new CalculadoraSalaRetangular();
         sala.calcularArea(5,3);
         sala.calcularPerimetro(7,3);
+        TabuadaMultiplicacao tabuada = new TabuadaMultiplicacao();
+        tabuada.mostrarTabuada(5);
 
     }
 }
