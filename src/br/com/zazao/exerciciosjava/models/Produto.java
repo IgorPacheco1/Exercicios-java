@@ -1,9 +1,13 @@
 package br.com.zazao.exerciciosjava.models;
 
+import br.com.zazao.exerciciosjava.calculos.Vendavel;
+
 public class Produto {
 
     private String nome;
     private double preco;
+    private int quantidade;
+
 
     public String getNome() {
         return nome;
@@ -22,10 +26,20 @@ public class Produto {
         return preco;
     }
 
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
     public double aplicarDesconto(double desconto){
         double valorDesconto = (desconto / 100) * getPreco();
         double valorFinal = getPreco() - valorDesconto;
 
         return setPreco(valorFinal);
     }
+
 }
+
