@@ -13,6 +13,6 @@ public class MainList {
             System.out.println(elemento);
         }
 
-        list.forEach( s -> System.out.println(list.toString()));
+        list.forEach( s -> System.out.println(s));
     }
 }
