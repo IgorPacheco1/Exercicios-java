@@ -1,3 +1,5 @@
+package br.com.zazao.exerciciosjava.main;
+
 import br.com.zazao.exerciciosjava.models.*;
 
 import java.util.ArrayList;
