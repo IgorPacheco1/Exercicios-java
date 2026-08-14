@@ -1,5 +1,8 @@
 package br.com.zazao.exerciciosjava.main;
 
+import br.com.zazao.exerciciosjava.models.Animal;
+import br.com.zazao.exerciciosjava.models.Cachorro;
+
 import java.util.ArrayList;
 
 public class MainList {
@@ -14,5 +17,9 @@ public class MainList {
         }
 
         list.forEach( s -> System.out.println(s));
+
+        Cachorro dog = new Cachorro();
+        Animal animal = (Animal) dog;
     }
+
 }
