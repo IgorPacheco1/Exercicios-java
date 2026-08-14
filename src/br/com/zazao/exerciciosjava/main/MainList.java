@@ -18,8 +18,15 @@ public class MainList {
 
         list.forEach( s -> System.out.println(s));
 
-        Cachorro dog = new Cachorro();
-        Animal animal = (Animal) dog;
+        Animal animal = new Cachorro();
+
+        if (animal instanceof Cachorro) {
+            Cachorro dog = (Cachorro) animal;
+            
+        }
+
+
+
     }
 
 }
