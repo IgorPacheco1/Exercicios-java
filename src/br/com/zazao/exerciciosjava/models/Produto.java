@@ -8,6 +8,11 @@ public class Produto {
     private double preco;
     private int quantidade;
 
+    public Produto(double preco, String nome, int quantidade) {
+        this.preco = preco;
+        this.nome = nome;
+        this.quantidade = quantidade;
+    }
 
     public String getNome() {
         return nome;
@@ -41,5 +46,9 @@ public class Produto {
         return setPreco(valorFinal);
     }
 
+    @Override
+    public String toString() {
+        return "Nome: " + getNome() + " Preço: R$" + getPreco() + " Quantidade: " + getQuantidade();
+    }
 }
 
