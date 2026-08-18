@@ -2,6 +2,8 @@ package br.com.zazao.exerciciosjava.main;
 import br.com.zazao.exerciciosjava.models.Animal;
 import br.com.zazao.exerciciosjava.models.Cachorro;
 import br.com.zazao.exerciciosjava.models.Produto;
+import br.com.zazao.exerciciosjava.models.Titulo;
+
 import java.util.Collections;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +54,16 @@ public class MainList {
         lista.add(14);
         Collections.sort(lista);
         System.out.println(lista);
+        List<Titulo> listaDeTitulos = new ArrayList<>();
+        Titulo item1 = new Titulo("Duna");
+        Titulo item2 = new Titulo("Mafia 3");
+        Titulo item3 = new Titulo("Free fire o filme");
 
+        listaDeTitulos.add(item1);
+        listaDeTitulos.add(item2);
+        listaDeTitulos.add(item3);
+        Collections.sort(listaDeTitulos);
+        System.out.println(listaDeTitulos);
     }
 
 }
