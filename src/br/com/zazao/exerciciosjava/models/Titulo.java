@@ -1,6 +1,6 @@
 package br.com.zazao.exerciciosjava.models;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
     private String nome;
     private int anoDeLancamento;
     private int duracaoEmMinutos;
@@ -70,5 +70,10 @@ public class Titulo {
     public double pegaMedia(){
         double media = somaDasAvaliacoes / totalDeAvaliacoes;
         return media;
+    }
+
+    @Override
+    public int compareTo(Titulo outronome) {
+        return this.getNome().compareTo(outronome.getNome());
     }
 }
