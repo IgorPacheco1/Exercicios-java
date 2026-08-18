@@ -7,6 +7,10 @@ public class Titulo implements Comparable<Titulo>{
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
 
+    public Titulo(String nome) {
+        this.nome = nome;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -70,6 +74,11 @@ public class Titulo implements Comparable<Titulo>{
     public double pegaMedia(){
         double media = somaDasAvaliacoes / totalDeAvaliacoes;
         return media;
+    }
+
+    @Override
+    public String toString() {
+        return this.getNome();
     }
 
     @Override
