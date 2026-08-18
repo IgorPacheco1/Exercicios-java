@@ -5,6 +5,10 @@ public class Serie extends Titulo{
     private int numeroDeTemporadas;
     private int minutosPorEpisodio;
 
+    public Serie(String nome) {
+        super(nome);
+    }
+
     public int getNumeroDeEpsodio() {
         return numeroDeEpsodio;
     }
