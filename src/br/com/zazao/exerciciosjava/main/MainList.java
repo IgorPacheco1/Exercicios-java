@@ -6,6 +6,7 @@ import br.com.zazao.exerciciosjava.models.Titulo;
 
 import java.util.Collections;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class MainList {
@@ -58,12 +59,20 @@ public class MainList {
         Titulo item1 = new Titulo("Duna");
         Titulo item2 = new Titulo("Mafia 3");
         Titulo item3 = new Titulo("Free fire o filme");
-
         listaDeTitulos.add(item1);
         listaDeTitulos.add(item2);
         listaDeTitulos.add(item3);
         Collections.sort(listaDeTitulos);
+        List<Titulo> lisaDeTitulosLinked = new LinkedList<>();
+        Titulo unidade1 = new Titulo("Minions");
+        Titulo unidade2 = new Titulo("Zelda");
+        Titulo unidade3 = new Titulo("Alice no pais das maravilhas");
+        lisaDeTitulosLinked.add(unidade1);
+        lisaDeTitulosLinked.add(unidade2);
+        lisaDeTitulosLinked.add(unidade3);
+        Collections.sort(lisaDeTitulosLinked);
         System.out.println(listaDeTitulos);
+        System.out.println(lisaDeTitulosLinked);
     }
 
 }
