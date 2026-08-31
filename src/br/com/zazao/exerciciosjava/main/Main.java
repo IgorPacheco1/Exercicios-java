@@ -1,4 +1,6 @@
 package br.com.zazao.exerciciosjava.main;
+import br.com.zazao.exerciciosjava.exceptions.SenhaInvalidaException;
+import br.com.zazao.exerciciosjava.models.Senha;
 import br.com.zazao.exerciciosjava.records.LivroRecord;
 import com.google.gson.Gson;
 
@@ -74,19 +76,30 @@ public class Main {
 //        LivroRecord livro = gson.fromJson(jsonLivro, LivroRecord.class);
 //        System.out.println(livro);
 
-        Scanner leitura  = new Scanner(System.in);
+//        Scanner leitura  = new Scanner(System.in);
+//
+//        System.out.println("Informe 2 numeros");
+//        int numero1 = leitura.nextInt();
+//        int numero2 = leitura.nextInt();
+//
+//        try {
+//            int resultado = numero1 / numero2;
+//            System.out.println("Resultado: " + resultado);
+//       }catch (ArithmeticException e){
+//            System.out.println("informe um numero que não seja 0");
+//        }
 
-        System.out.println("Informe 2 numeros");
-        int numero1 = leitura.nextInt();
-        int numero2 = leitura.nextInt();
+        Scanner leitur = new Scanner(System.in);
 
+        System.out.println("Informe sua senha");
+        System.out.println("Ela deve conter no minimo 8 caracteres");
+        String senha = leitur.nextLine();
         try {
-            int resultado = numero1 / numero2;
-            System.out.println("Resultado: " + resultado);
-        }catch (ArithmeticException e){
-            System.out.println("informe um numero que não seja 0");
+            Senha.validarSenha(senha);
+            System.out.println("A senha atende aos requisitos");
+        }catch (SenhaInvalidaException e){
+            System.out.println(e.getMessage());
         }
-
 
     }
 }
