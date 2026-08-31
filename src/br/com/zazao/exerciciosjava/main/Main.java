@@ -65,11 +65,16 @@ public class Main {
 //        System.out.println(produto4);
 
 
-        String jsonPessoa = "{\"nome\":\"Rodrigo\",\"cidade\":\"Brasília\"}";
+//        String jsonPessoa = "{\"nome\":\"Rodrigo\",\"cidade\":\"Brasília\"}";
+//
+//        Gson gson = new GsonBuilder().setLenient().create();
+//        PessoaRecord pessoa = gson.fromJson(jsonPessoa,PessoaRecord.class);
+//        System.out.println(pessoa);
 
-        Gson gson = new GsonBuilder().setLenient().create();
-        PessoaRecord pessoa = gson.fromJson(jsonPessoa,PessoaRecord.class);
-        System.out.println(pessoa);
+        String jsonLivro = "{\"titulo\":\"Aventuras do Java\",\"autor\":\"Akemi\",\"editora\":{\"nome\":\"TechBooks\",\"cidade\":\"São Paulo\"}}";
+        Gson gson = new Gson();
+        LivroRecord livro = gson.fromJson(jsonLivro, LivroRecord.class);
+        System.out.println(livro);
 
 
 
