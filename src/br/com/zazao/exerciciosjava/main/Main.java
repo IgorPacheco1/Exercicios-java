@@ -2,6 +2,7 @@ package br.com.zazao.exerciciosjava.main;
 
 import br.com.zazao.exerciciosjava.models.*;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 
@@ -64,9 +65,9 @@ public class Main {
 //        System.out.println(produto4);
 
 
-        String jsonPessoa = "{\"nome\":\"Rodrigo\",\"idade\":20,\"cidade\":\"Brasília\"}";
+        String jsonPessoa = "{\"nome\":\"Rodrigo\",\"cidade\":\"Brasília\"}";
 
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setLenient().create();
         PessoaRecord pessoa = gson.fromJson(jsonPessoa,PessoaRecord.class);
         System.out.println(pessoa);
 
