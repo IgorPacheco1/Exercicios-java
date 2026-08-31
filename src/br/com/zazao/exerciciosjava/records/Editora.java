@@ -1,4 +1,4 @@
-package br.com.zazao.exerciciosjava.models;
+package br.com.zazao.exerciciosjava.records;
 
 public record Editora(String nome, String cidade) {
 

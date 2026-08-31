@@ -1,10 +1,7 @@
 package br.com.zazao.exerciciosjava.main;
 
-import br.com.zazao.exerciciosjava.models.*;
+import br.com.zazao.exerciciosjava.records.LivroRecord;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.util.ArrayList;
 
 
 public class Main {
