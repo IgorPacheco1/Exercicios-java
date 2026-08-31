@@ -1,7 +1,8 @@
 package br.com.zazao.exerciciosjava.main;
-
 import br.com.zazao.exerciciosjava.records.LivroRecord;
 import com.google.gson.Gson;
+
+import java.util.Scanner;
 
 
 public class Main {
@@ -68,11 +69,23 @@ public class Main {
 //        PessoaRecord pessoa = gson.fromJson(jsonPessoa,PessoaRecord.class);
 //        System.out.println(pessoa);
 
-        String jsonLivro = "{\"titulo\":\"Aventuras do Java\",\"autor\":\"Akemi\",\"editora\":{\"nome\":\"TechBooks\",\"cidade\":\"São Paulo\"}}";
-        Gson gson = new Gson();
-        LivroRecord livro = gson.fromJson(jsonLivro, LivroRecord.class);
-        System.out.println(livro);
+//        String jsonLivro = "{\"titulo\":\"Aventuras do Java\",\"autor\":\"Akemi\",\"editora\":{\"nome\":\"TechBooks\",\"cidade\":\"São Paulo\"}}";
+//        Gson gson = new Gson();
+//        LivroRecord livro = gson.fromJson(jsonLivro, LivroRecord.class);
+//        System.out.println(livro);
 
+        Scanner leitura  = new Scanner(System.in);
+
+        System.out.println("Informe 2 numeros");
+        int numero1 = leitura.nextInt();
+        int numero2 = leitura.nextInt();
+
+        try {
+            int resultado = numero1 / numero2;
+            System.out.println("Resultado: " + resultado);
+        }catch (ArithmeticException e){
+            System.out.println("informe um numero que não seja 0");
+        }
 
 
     }
