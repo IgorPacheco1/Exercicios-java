@@ -1,6 +1,7 @@
 package br.com.zazao.exerciciosjava.main;
 
 import br.com.zazao.exerciciosjava.models.*;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -44,23 +45,32 @@ public class Main {
 //        System.out.println("");
 //        listaDePessoas.forEach(pessoa -> System.out.println("Nome:" + pessoa.getNome() + " Idade: " + pessoa.getIdade()));
 
+//
+//        ArrayList<Produto> listaDeProdutos = new ArrayList<>();
+//
+//        Produto produto1 = new Produto(5.99,"Biscoito", 10);
+//        Produto produto2 = new Produto(8.99,"chocolate", 1);
+//        Produto produto3 = new Produto(0.25,"bala", 30);
+//
+//        listaDeProdutos.add(produto1);
+//        listaDeProdutos.add(produto2);
+//        listaDeProdutos.add(produto3);
+//        System.out.println(listaDeProdutos.size());
+//        System.out.println(listaDeProdutos.get(2));
+//        System.out.println(listaDeProdutos);
+//
+//        ProdutoPerecivel produto4 = new ProdutoPerecivel(15.99,"Arroz",15,"01/01/2028");
+//
+//        System.out.println(produto4);
 
-        ArrayList<Produto> listaDeProdutos = new ArrayList<>();
 
-        Produto produto1 = new Produto(5.99,"Biscoito", 10);
-        Produto produto2 = new Produto(8.99,"chocolate", 1);
-        Produto produto3 = new Produto(0.25,"bala", 30);
+        String jsonPessoa = "{\"nome\":\"Rodrigo\",\"idade\":20,\"cidade\":\"Brasília\"}";
 
-        listaDeProdutos.add(produto1);
-        listaDeProdutos.add(produto2);
-        listaDeProdutos.add(produto3);
-        System.out.println(listaDeProdutos.size());
-        System.out.println(listaDeProdutos.get(2));
-        System.out.println(listaDeProdutos);
+        Gson gson = new Gson();
+        PessoaRecord pessoa = gson.fromJson(jsonPessoa,PessoaRecord.class);
+        System.out.println(pessoa);
 
-        ProdutoPerecivel produto4 = new ProdutoPerecivel(15.99,"Arroz",15,"01/01/2028");
 
-        System.out.println(produto4);
 
     }
 }
