@@ -1,9 +1,16 @@
 package br.com.zazao.exerciciosjava.main;
+import br.com.zazao.exerciciosjava.exceptions.ErroConsultaGitHubException;
 import br.com.zazao.exerciciosjava.exceptions.SenhaInvalidaException;
+import br.com.zazao.exerciciosjava.models.InformacoesGitHub;
 import br.com.zazao.exerciciosjava.models.Senha;
 import br.com.zazao.exerciciosjava.records.LivroRecord;
 import com.google.gson.Gson;
 
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.util.Scanner;
 
 
@@ -88,18 +95,54 @@ public class Main {
 //       }catch (ArithmeticException e){
 //            System.out.println("informe um numero que não seja 0");
 //        }
+//
+//        Scanner leitur = new Scanner(System.in);
+//
+//        System.out.println("Informe sua senha");
+//        System.out.println("Ela deve conter no minimo 8 caracteres");
+//        String senha = leitur.nextLine();
+//        try {
+//            Senha.validarSenha(senha);
+//            System.out.println("A senha atende aos requisitos");
+//        }catch (SenhaInvalidaException e){
+//            System.out.println(e.getMessage());
+//        }
 
-        Scanner leitur = new Scanner(System.in);
+        Scanner leitura = new Scanner(System.in);
+        System.out.println("Digite o nome de usuário do GitHub para consultar informações: ");
+        String usuario = leitura.nextLine();
+        InformacoesGitHub usuario1 = new InformacoesGitHub();
+        usuario1.setUsuario(usuario);
+        String endereco = usuario1.getUrl() + usuario;
 
-        System.out.println("Informe sua senha");
-        System.out.println("Ela deve conter no minimo 8 caracteres");
-        String senha = leitur.nextLine();
         try {
-            Senha.validarSenha(senha);
-            System.out.println("A senha atende aos requisitos");
-        }catch (SenhaInvalidaException e){
+
+            // tenho que melhorar o entendimento dessa parte de chamar as API's
+            // no momento não consigo fazer isso sem ajuda
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(endereco))
+                    .header("Accept", "application/vnd.github.v3+json")
+                    .build();
+
+            HttpResponse<String> response = client
+                    .send(request, HttpResponse.BodyHandlers.ofString());
+
+            if (response.statusCode() == 404) {
+                throw new ErroConsultaGitHubException("Usuário não encontrado no GitHub.");
+            }
+
+            String json = response.body();
+            System.out.println(json);
+
+        } catch (IOException | InterruptedException e) {
+            System.out.println("Opss… Houve um erro durante a consulta à API do GitHub.");
+            e.printStackTrace();
+        } catch (ErroConsultaGitHubException e) {
             System.out.println(e.getMessage());
         }
+
+
 
     }
 }
